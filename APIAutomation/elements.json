@@ -1,0 +1,17 @@
+{
+  "Registration":
+      {
+         "btn_submit_xpath":"//input[@type='submit']",
+         "txtfield_username_name":"fld_username",
+         "txtfield_email_css":".field",
+         "txtfield_password_xpath":"//input[@name='fld_password']",
+         "rdbtn_address_type_name":"add_type",
+         "chkbox_terms_name":"terms",
+         "link_readdetails_xpath":"//a[text()='Read Detail']",
+         "btn_close_xpath":"//a[text()='X']",
+         "drp_gender_xpath":"//select[@name='sex']",
+         "drp_country_xpath":"//select[@name='country']",
+         "drp_state_xpath":"//select[@name='state']"
+
+      }
+}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-10-07T15:23:32.307388" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 007BeforeAndAfterSuiteforFolderSubfolder" source="D:\RobotFramework\AutomationUdemy2\UserDefineExample\BeforeAfterSuite\TC_007BeforeAndAfterSuiteforFolderSubfolder.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>TestSuite Started using Suite Setup</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-07T15:23:32.708029" elapsed="0.001020"/>
+</kw>
+<test id="s1-t1" name="TC_001 END TO END 1" line="17">
+<kw name="Start Browser and Maximize" owner="resource6" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:32.711640" level="INFO">Opening browser 'chrome' to base url 'https://thetestingworld.com/testings/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-07T15:23:32.711640" elapsed="16.613332"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-07T15:23:49.325994" elapsed="0.068172"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-10-07T15:23:32.710593" elapsed="16.684587"/>
+</kw>
+<kw name="Click signUP Enter Username Password" owner="resource6">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:49.399267" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<arg>xpath://input[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:49.398163" elapsed="0.256182"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:49.655524" level="INFO">Typing text 'Ganesh' into text field 'name:fld_username'.</msg>
+<arg>name:fld_username</arg>
+<arg>Ganesh</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:49.654345" elapsed="0.187241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:49.841586" level="INFO">Typing text 'salunkhe@gmail.com' into text field 'name:fld_email'.</msg>
+<arg>name:fld_email</arg>
+<arg>salunkhe@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:49.841586" elapsed="0.242667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.085255" level="INFO">Typing text 'ganusalunkhe' into text field 'xpath://input[@name='fld_password']'.</msg>
+<arg>xpath://input[@name='fld_password']</arg>
+<arg>ganusalunkhe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.084253" elapsed="0.234506"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>xpath://input[@name='fld_password']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.319777" elapsed="0.076650"/>
+</kw>
+<status status="PASS" start="2024-10-07T15:23:49.396164" elapsed="1.000263"/>
+</kw>
+<kw name="Radiobtn Checkbox Link selection" owner="resource6">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.399860" level="INFO">Selecting 'home' from radio button 'add_type'.</msg>
+<arg>add_type</arg>
+<arg>home</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.398837" elapsed="0.144793"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.544652" level="INFO">Selecting checkbox 'name:terms'.</msg>
+<arg>name:terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.543630" elapsed="0.190761"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.735391" level="INFO">Clicking link 'xpath://a[text()='Read Detail']'.</msg>
+<arg>xpath://a[text()='Read Detail']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.735391" elapsed="0.141051"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.876442" level="INFO">Clicking element 'xpath://a[text()='X']'.</msg>
+<arg>xpath://a[text()='X']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.876442" elapsed="0.105179"/>
+</kw>
+<status status="PASS" start="2024-10-07T15:23:50.397593" elapsed="0.584028"/>
+</kw>
+<kw name="Checkbox selection" owner="resource6">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.983622" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:23:50.984627" level="INFO">Selecting options from selection list 'xpath://select[@name='sex']' by index 2.</msg>
+<arg>xpath://select[@name='sex']</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-10-07T15:23:50.984627" elapsed="22.244829"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:24:13.229456" level="INFO">Selecting options from selection list 'xpath://select[@name='country']' by label India.</msg>
+<arg>xpath://select[@name='country']</arg>
+<arg>India</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-10-07T15:24:13.229456" elapsed="16.240249"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:24:29.469705" level="INFO">Selecting options from selection list 'xpath://select[@name='state']' by value 22.</msg>
+<arg>xpath://select[@name='state']</arg>
+<arg>22</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-10-07T15:24:29.469705" elapsed="16.221229"/>
+</kw>
+<status status="PASS" start="2024-10-07T15:23:50.982625" elapsed="54.708309"/>
+</kw>
+<kw name="Close Browser window" owner="resource6" type="TEARDOWN">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-10-07T15:24:47.707216" level="INFO">${title} = Login &amp; Sign Up Forms</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-10-07T15:24:45.694353" elapsed="2.012863"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-07T15:24:47.708243" elapsed="0.000998"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-07T15:24:47.712736" elapsed="5.017342"/>
+</kw>
+<status status="PASS" start="2024-10-07T15:24:45.693328" elapsed="7.036750"/>
+</kw>
+<tag>ALLTCS</tag>
+<tag>TestingTag</tag>
+<status status="PASS" start="2024-10-07T15:23:32.709049" elapsed="80.022042"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>TestSuite END using Suite TearDown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-07T15:24:52.733603" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-07T15:23:32.324390" elapsed="80.409213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">ALLTCS</stat>
+<stat pass="1" fail="0" skip="0">TestingTag</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 007BeforeAndAfterSuiteforFolderSubfolder">TC 007BeforeAndAfterSuiteforFolderSubfolder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

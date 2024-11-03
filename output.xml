@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-10-29T14:45:11.511971" rpa="false" schemaversion="5">
+<suite id="s1" name="AutomationUdemy2" source="D:\RobotFramework\AutomationUdemy2">
+<suite id="s1-s1" name="ExcelTestcases" source="D:\RobotFramework\AutomationUdemy2\ExcelTestcases">
+<suite id="s1-s1-s1" name="TC 01 ExcelReadTestcase" source="D:\RobotFramework\AutomationUdemy2\ExcelTestcases\TC_01_ExcelReadTestcase.robot">
+<test id="s1-s1-s1-t1" name="TC001 Browser Start and Close" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:13.326735" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-29T14:45:13.325733" elapsed="25.550043"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-29T14:45:38.876789" elapsed="0.076902"/>
+</kw>
+<kw name="Read number of rows" owner="ReadExcelData">
+<kw name="Fetch Number Of Rows" owner="ReadExcel">
+<msg time="2024-10-29T14:45:38.956701" level="INFO">${totalrows} = 5</msg>
+<var>${totalrows}</var>
+<arg>${sheetname}</arg>
+<status status="PASS" start="2024-10-29T14:45:38.955709" elapsed="0.000992"/>
+</kw>
+<return>
+<value>${totalrows}</value>
+<status status="PASS" start="2024-10-29T14:45:38.956701" elapsed="0.001003"/>
+</return>
+<msg time="2024-10-29T14:45:38.957704" level="INFO">${maxrow} = 5</msg>
+<var>${maxrow}</var>
+<arg>Reading</arg>
+<status status="PASS" start="2024-10-29T14:45:38.954707" elapsed="0.002997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${maxrow}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:38.959039" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T14:45:43.961732" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T14:45:38.960626" elapsed="5.001106"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:43.962746" level="INFO">${celldata} = Username 1</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:43.962746" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:43.962746" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:45:43.962746" level="INFO">${UN} = Username 1</msg>
+<var>${UN}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T14:45:43.961732" elapsed="0.001014"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>username is +${UN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:43.963746" elapsed="0.000000"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:43.964743" level="INFO">${celldata} = Password 1</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:43.964743" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:43.964743" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:45:43.964743" level="INFO">${PASS} = Password 1</msg>
+<var>${PASS}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-10-29T14:45:43.963746" elapsed="0.000997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>password is +${PASS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:43.964743" elapsed="0.000998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:43.966245" level="INFO">Typing text 'Username 1' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${UN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:43.965741" elapsed="0.248332"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:44.215586" level="INFO">Typing text 'Password 1' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:44.214073" elapsed="0.259763"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:44.474831" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:44.473836" elapsed="0.163167"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-10-29T14:45:38.960626" elapsed="5.676377"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T14:45:49.638328" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T14:45:44.638007" elapsed="5.000321"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:49.640709" level="INFO">${celldata} = Username 2</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:49.639689" elapsed="0.001020"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:49.641871" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:45:49.641871" level="INFO">${UN} = Username 2</msg>
+<var>${UN}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T14:45:49.638328" elapsed="0.003543"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>username is +${UN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:49.642884" elapsed="0.001347"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:49.646756" level="INFO">${celldata} = Password 2</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:49.645741" elapsed="0.001015"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:49.646756" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:45:49.647762" level="INFO">${PASS} = Password 2</msg>
+<var>${PASS}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-10-29T14:45:49.644231" elapsed="0.003531"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>password is +${PASS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:49.648799" elapsed="0.001014"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:49.651328" level="INFO">Typing text 'Username 2' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${UN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:49.650819" elapsed="0.291489"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:49.944435" level="INFO">Typing text 'Password 2' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:49.943330" elapsed="0.264056"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:50.209404" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:50.208402" elapsed="0.928703"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-10-29T14:45:44.637003" elapsed="6.500102"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T14:45:56.138689" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T14:45:51.138107" elapsed="5.000582"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:56.139207" level="INFO">${celldata} = Username 3</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:56.139207" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:56.139207" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:45:56.139207" level="INFO">${UN} = Username 3</msg>
+<var>${UN}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T14:45:56.138689" elapsed="0.000518"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>username is +${UN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.139207" elapsed="0.001506"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:45:56.140713" level="INFO">${celldata} = Password 3</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:45:56.140713" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:45:56.140713" elapsed="0.001171"/>
+</return>
+<msg time="2024-10-29T14:45:56.141884" level="INFO">${PASS} = Password 3</msg>
+<var>${PASS}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-10-29T14:45:56.140713" elapsed="0.001171"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>password is +${PASS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.141884" elapsed="0.000507"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:56.142391" level="INFO">Typing text 'Username 3' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${UN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.142391" elapsed="0.129272"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:56.271663" level="INFO">Typing text 'Password 3' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.271663" elapsed="0.160511"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:45:56.433643" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.432174" elapsed="0.096321"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-10-29T14:45:51.137105" elapsed="5.392415"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T14:46:01.529799" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T14:45:56.529520" elapsed="5.000279"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:46:01.535339" level="INFO">${celldata} = Username 4</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:46:01.534345" elapsed="0.002289"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:46:01.536634" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:46:01.537653" level="INFO">${UN} = Username 4</msg>
+<var>${UN}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T14:46:01.530763" elapsed="0.006890"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>username is +${UN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.538889" elapsed="0.001053"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:46:01.543921" level="INFO">${celldata} = Password 4</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:46:01.542926" elapsed="0.000995"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:46:01.543921" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:46:01.544925" level="INFO">${PASS} = Password 4</msg>
+<var>${PASS}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-10-29T14:46:01.540936" elapsed="0.003989"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>password is +${PASS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.545921" elapsed="0.001001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:01.552506" level="INFO">Typing text 'Username 4' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${UN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.550927" elapsed="0.159901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:01.710828" level="INFO">Typing text 'Password 4' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.710828" elapsed="0.102756"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:01.813584" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.813584" elapsed="0.058662"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-10-29T14:45:56.529520" elapsed="5.343734"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T14:46:06.873888" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T14:46:01.873254" elapsed="5.000634"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:46:06.875189" level="INFO">${celldata} = Username 5</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:46:06.875189" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:46:06.875189" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:46:06.875189" level="INFO">${UN} = Username 5</msg>
+<var>${UN}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T14:46:06.873888" elapsed="0.001301"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>username is +${UN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:46:06.876200" elapsed="0.000000"/>
+</kw>
+<kw name="Read cell data" owner="ReadExcelData">
+<kw name="Fetch Cell Data" owner="ReadExcel">
+<msg time="2024-10-29T14:46:06.878011" level="INFO">${celldata} = Password 5</msg>
+<var>${celldata}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-10-29T14:46:06.878011" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-10-29T14:46:06.878011" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-29T14:46:06.878011" level="INFO">${PASS} = Password 5</msg>
+<var>${PASS}</var>
+<arg>Reading</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-10-29T14:46:06.876200" elapsed="0.001811"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>password is +${PASS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-29T14:46:06.878011" elapsed="0.001010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:06.879021" level="INFO">Typing text 'Username 5' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${UN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:06.879021" elapsed="0.126954"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:07.008002" level="INFO">Typing text 'Password 5' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:07.006994" elapsed="0.138417"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T14:46:07.146567" level="INFO">Clicking button 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T14:46:07.146567" elapsed="0.086610"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-10-29T14:46:01.873254" elapsed="5.359923"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${maxrow}+1</value>
+<status status="PASS" start="2024-10-29T14:45:38.959039" elapsed="28.274138"/>
+</for>
+<status status="PASS" start="2024-10-29T14:45:13.323734" elapsed="53.910554"/>
+</test>
+<status status="PASS" start="2024-10-29T14:45:11.631648" elapsed="55.603654"/>
+</suite>
+<status status="PASS" start="2024-10-29T14:45:11.628399" elapsed="55.608408"/>
+</suite>
+<status status="PASS" start="2024-10-29T14:45:11.517286" elapsed="55.723628"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="AutomationUdemy2">AutomationUdemy2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="ExcelTestcases">AutomationUdemy2.ExcelTestcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TC 01 ExcelReadTestcase">AutomationUdemy2.ExcelTestcases.TC 01 ExcelReadTestcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-29T14:45:11.357720" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\Resources\resource3.robot' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T14:45:11.375812" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\Resources-ExcelTestcases\ReadExcelData.robot' on line 9: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T14:45:11.375812" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\Resources-ExcelTestcases\ReadExcelData.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T14:45:11.468828" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\TestcaseUsingJasonLoct\TC_01End2EndFlow.robot' on line 45: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T14:45:12.301941" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\Resources-ExcelTestcases\ReadExcelData.robot' on line 9: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T14:45:12.304409" level="WARN">Error in file 'D:\RobotFramework\AutomationUdemy2\Resources-ExcelTestcases\ReadExcelData.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
